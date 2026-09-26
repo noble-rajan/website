@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Star Bakery - Pre-Orders & Contact</title>
+</head>
+<body>
+
+    <header>
+        <img src="bakery-logo_c.png" alt="North Star Bakery logo showing a compass and wheat motif">
+        <h1>North Star Bakery</h1>
+        <p>Fresh sourdough, butter croissants, and daily coffee on Main Street.</p>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact & Pre-Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Get in Touch or Reserve Your Order</h2>
+            <p>Want to make sure your favorite bread doesn't sell out before you get here? Put in a pre-order request below. We ask for at least 24 hours notice for standard daily items, and 5 days notice for custom celebration cakes.</p>
+        </section>
+
+        <section>
+            <h2>Order & Inquiry Form</h2>
+            
+            <form action="#" method="post">
+                
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    
+                    <p>
+                        <label for="full-name">Full Name *</label><br>
+                        <input type="text" id="full-name" name="full_name" required minlength="2">
+                    </p>
+                    
+                    <p>
+                        <label for="email-address">Email Address *</label><br>
+                        <input type="email" id="email-address" name="email_address" required>
+                    </p>
+                    
+                    <p>
+                        <label for="phone-number">Phone Number</label><br>
+                        <input type="tel" id="phone-number" name="phone_number">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Order Details</legend>
+                    
+                    <p>
+                        <label for="request-type">Request Type *</label><br>
+                        <select id="request-type" name="request_type" required>
+                            <option value="">-- Please select an option --</option>
+                            <option value="pre-order">Standard Item Pre-Order</option>
+                            <option value="custom-cake">Custom Cake Request</option>
+                            <option value="catering">Event Catering Inquiry</option>
+                            <option value="general">General Question</option>
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <label for="pickup-date">Requested Pickup Date *</label><br>
+                        <input type="date" id="pickup-date" name="pickup_date" required>
+                    </p>
+                    
+                    <p>
+                        <label for="item-details">Item Details & Quantities *</label><br>
+                        <textarea id="item-details" name="item_details" rows="5" cols="40" required placeholder="Example: 2 Signature Sourdough Loaves, 4 Butter Croissants"></textarea>
+                    </p>
+                    
+                    <p>
+                        <label for="allergy-notes">Allergies or Dietary Restrictions</label><br>
+                        <textarea id="allergy-notes" name="allergy_notes" rows="3" cols="40" placeholder="Let us know if anyone in your group has nut, dairy, or other dietary concerns."></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Submit Request</button>
+                </p>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Visit the Bakery</h2>
+            <p><strong>Store Address:</strong> 123 Main Street, Neighborhood City, ST 12345</p>
+            <p><strong>Phone:</strong> (555) 019-2831</p>
+            <p><strong>Email:</strong> info@northstarbakery.com</p>
+            
+            <h3>Store Hours</h3>
+            <ul>
+                <li><strong>Tuesday – Friday:</strong> 6:30 AM – 4:00 PM</li>
+                <li><strong>Saturday &amp; Sunday:</strong> 7:00 AM – 3:00 PM</li>
+                <li><strong>Monday:</strong> Closed for baking prep</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
+        <p>Questions? Email us at info@northstarbakery.com or call (555) 019-2831.</p>
+    </footer>
+
+</body>
+</html>
