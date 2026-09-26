@@ -1,19 +1,15 @@
-/* ==========================================================================
-   North Star Bakery - CSS Design System (Touchstone 3)
-   ========================================================================== */
 
-/* 1. Global Variables & Color Palette (3 Main Colors + Neutrals) */
 :root {
-    --color-primary: #5c3a21;      /* Deep crust brown - Headings & Header */
-    --color-secondary: #c88a38;    /* Warm wheat gold - Accents & Links */
-    --color-bg-light: #fdfbf7;     /* Warm cream - Background */
-    --color-text-dark: #2c2520;    /* Dark charcoal - High contrast body text */
-    --color-card-bg: #ffffff;      /* Pure white - Content card background */
+    --color-primary: #5c3a21;      /* Headings & Header */
+    --color-secondary: #c88a38;    /* Accents & Links */
+    --color-bg-light: #fdfbf7;     /* Background */
+    --color-text-dark: #2c2520;    /* High contrast body text */
+    --color-card-bg: #ffffff;      /* Content card background */
     --font-heading: 'Georgia', serif;
     --font-body: 'Arial', sans-serif;
 }
 
-/* 2. Base & Typography Styles */
+/*Base & Typography Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -60,7 +56,7 @@ a:hover, a:focus {
     color: var(--color-secondary);
 }
 
-/* 3. Header & Navigation (Mobile-First Flexbox) */
+/*Header & Navigation (Mobile-First Flexbox)*/
 header {
     background-color: #f4ede2;
     padding: 1.25rem;
@@ -99,7 +95,7 @@ nav a:hover, nav a:focus {
     color: #ffffff;
 }
 
-/* 4. Main Content & Cards */
+/*Main Content & Cards*/
 main {
     max-width: 1000px;
     margin: 0 auto;
@@ -135,7 +131,7 @@ figcaption {
     margin-top: 0.5rem;
 }
 
-/* 5. Forms & Inputs */
+/*Forms & Inputs */
 fieldset {
     border: 1px solid var(--color-secondary);
     border-radius: 6px;
@@ -181,7 +177,7 @@ button:hover {
     background-color: var(--color-secondary);
 }
 
-/* 6. Footer */
+/*Footer */
 footer {
     text-align: center;
     padding: 1.5rem;
@@ -191,9 +187,8 @@ footer {
     margin-top: 2rem;
 }
 
-/* ==========================================================================
-   7. Responsive Layout Adjustment (Desktop Media Query)
-   ========================================================================== */
+/*
+Responsive Layout Adjustment (Desktop Media Query)*/
 @media (min-width: 768px) {
     body {
         padding: 2rem;
