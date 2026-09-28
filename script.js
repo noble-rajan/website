@@ -1,8 +1,6 @@
-/* ==========================================================================
-   North Star Bakery - Touchstone 4 Interactivity & Form Validation
-   ========================================================================== */
 
-// --- DATA STRUCTURE: Array of Objects for Interactive Products Feature ---
+
+//  Array of Objects for Interactive Products
 const featuredItems = [
     { id: 'sourdough', name: 'Signature Country Sourdough', category: 'bread', price: '$8.50', desc: 'Slow-fermented for 24 hours with a crisp crust and chewy crumb.' },
     { id: 'croissant', name: 'Butter Croissant', category: 'pastry', price: '$4.25', desc: 'Flaky, golden layers baked fresh every morning at 6:30 AM.' },
@@ -15,20 +13,20 @@ document.addEventListener('DOMContentLoaded', () => {
     initFormValidation();
 });
 
-/* ==========================================================================
-   FEATURE 1 & BROWSER STORAGE: Product Favorites / Wishlist Tracker
-   ========================================================================== */
+/* 
+   FEATURE 1 & BROWSER STORAGE: Product Favorites or Wishlist Tracker
+ */
 function initFavoritesFeature() {
     const favoritesContainer = document.getElementById('favorites-list');
     const filterButtons = document.querySelectorAll('.filter-btn');
 
     if (!favoritesContainer) return; // Safely exits on index, about, and contact pages
 
-    // Load stored favorites from localStorage on page load
+    // Load stored favorite from localStorage on the page load
     let savedFavorites = getStoredFavorites();
     renderFavorites(savedFavorites);
 
-    // Event Delegation / Handling for Favorite Buttons
+    // Event Delegation or Handling for the Favorite Buttons
     document.addEventListener('click', (e) => {
         if (e.target && e.target.classList.contains('fav-toggle-btn')) {
             const itemId = e.target.getAttribute('data-id');
@@ -36,7 +34,7 @@ function initFavoritesFeature() {
         }
     });
 
-    // Filtering logic for categories
+    // Filtering logic part for categories
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             const category = button.getAttribute('data-category');
@@ -45,18 +43,18 @@ function initFavoritesFeature() {
     });
 }
 
-// Get favorites from localStorage
+// Get favorites from the localStorage
 function getStoredFavorites() {
     const data = localStorage.getItem('northstar_favorites');
     return data ? JSON.parse(data) : [];
 }
 
-// Save favorites array to localStorage
+// Save favorites array to the localStorage
 function saveFavorites(favoritesArray) {
     localStorage.setItem('northstar_favorites', JSON.stringify(favoritesArray));
 }
 
-// Toggle item in favorites list
+// Toggle item in the favorites list
 function toggleFavorite(itemId) {
     let favorites = getStoredFavorites();
     if (favorites.includes(itemId)) {
@@ -69,7 +67,7 @@ function toggleFavorite(itemId) {
     updateButtonStates(favorites);
 }
 
-// Render saved items in DOM
+// Render saved items in the DOM
 function renderFavorites(favoritesArray) {
     const container = document.getElementById('favorites-list');
     if (!container) return;
@@ -89,7 +87,7 @@ function renderFavorites(favoritesArray) {
     `).join('');
 }
 
-// Update button labels dynamically
+// Update button labels dynamically since it is possible
 function updateButtonStates(favoritesArray) {
     const buttons = document.querySelectorAll('.fav-toggle-btn:not(.remove-btn)');
     buttons.forEach(btn => {
@@ -118,14 +116,14 @@ function filterProductsByCategory(category) {
 }
 
 
-/* ==========================================================================
+/* 
    FEATURE 2: Custom JavaScript Form Validation & Inline Error Feedback
-   ========================================================================== */
+   */
 function initFormValidation() {
     const orderForm = document.getElementById('bakery-order-form');
     if (!orderForm) return; // Safely exits on pages without the order form
 
-    // Load remembered customer name from localStorage if available
+    // Load remembered customer name from localStorage if it is available
     const savedName = localStorage.getItem('northstar_customer_name');
     const nameInput = document.getElementById('full-name');
     if (savedName && nameInput) {
@@ -138,13 +136,13 @@ function initFormValidation() {
         // Clear existing error messages
         clearInlineErrors();
 
-        // 1. Required Field & Min Length Validation (Name)
+        // 1. Required Field & Min Length Validation of name
         if (nameInput) {
             if (nameInput.value.trim().length < 2) {
                 showInlineError(nameInput, 'Please enter your full name (at least 2 characters).');
                 isValid = false;
             } else {
-                // Save customer name for future visits
+                // Save customers name for their future visits
                 localStorage.setItem('northstar_customer_name', nameInput.value.trim());
             }
         }
@@ -159,7 +157,7 @@ function initFormValidation() {
             }
         }
 
-        // 3. Pickup Date Validation (Must be selected and in future)
+        // 3. Pickup Date Validation 
         const dateInput = document.getElementById('pickup-date');
         if (dateInput) {
             if (!dateInput.value) {
@@ -168,7 +166,7 @@ function initFormValidation() {
             }
         }
 
-        // Prevent submission if invalid
+        // Prevent submission if it is not valid or invalid
         if (!isValid) {
             e.preventDefault();
         } else {
