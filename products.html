@@ -27,6 +27,17 @@
         <section>
             <h2>What We Bake Daily</h2>
             <p>We stock our counter every morning at 6:30 AM. We don't sell items directly through the website, but you can put in a pre-order on our contact page if you want us to hold something for you.</p>
+            
+            <div class="category-filters">
+                <button class="filter-btn" data-category="all">All Items</button>
+                <button class="filter-btn" data-category="bread">Breads</button>
+                <button class="filter-btn" data-category="pastry">Pastries</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Your Pickup Wishlist</h2>
+            <div id="favorites-list"></div>
         </section>
 
         <section>
@@ -38,10 +49,16 @@
                 <figcaption>Our Signature Country Sourdough — crispy crust, soft center, baked fresh every morning.</figcaption>
             </figure>
 
-            <ul>
-                <li>
+            <ul class="product-list">
+                <li class="product-card" data-category="bread">
                     <strong>Signature Country Sourdough</strong> — $8.00 per loaf
                     <br>Our daily bread. Great for morning toast or dipping into soup.
+                    <br><button class="fav-toggle-btn" data-id="sourdough">+ Add to Pickup List</button>
+                </li>
+                <li class="product-card" data-category="bread">
+                    <strong>Dark Artisan Rye</strong> — $9.00 per loaf
+                    <br>Hearty whole-grain rye baked with caraway seeds.
+                    <br><button class="fav-toggle-btn" data-id="rye">+ Add to Pickup List</button>
                 </li>
                 <li>
                     <strong>Seeded Multigrain</strong> — $8.50 - $9.00 per loaf
@@ -63,18 +80,20 @@
         <section>
             <h2>Pastries & Morning Snacks</h2>
             <p>All our pastry dough is rolled from scratch using real butter. Grab one with your morning coffee before they run out.</p>
-            <ul>
-                <li>
+            <ul class="product-list">
+                <li class="product-card" data-category="pastry">
                     <strong>Butter Croissants</strong> — $3.75 - $4.50 each
                     <br>Flaky and layered. Available plain, filled with dark chocolate, or topped with toasted almonds.
+                    <br><button class="fav-toggle-btn" data-id="croissant">+ Add to Pickup List</button>
+                </li>
+                <li class="product-card" data-category="pastry">
+                    <strong>Cinnamon Rolls</strong> — $4.25 each
+                    <br>Soft dough rolled with cinnamon sugar and finished with cream cheese frosting.
+                    <br><button class="fav-toggle-btn" data-id="cinnamon-roll">+ Add to Pickup List</button>
                 </li>
                 <li>
                     <strong>Fruit Tartlets</strong> — $5.00 - $6.00 each
                     <br>Crisp buttery shell filled with vanilla cream and seasonal berries from the farmers market.
-                </li>
-                <li>
-                    <strong>Cinnamon Rolls</strong> — $4.25 each
-                    <br>Soft dough rolled with cinnamon sugar and finished with cream cheese frosting.
                 </li>
                 <li>
                     <strong>Daily Muffins & Scones</strong> — $3.50 - $4.00 each
@@ -104,6 +123,6 @@
         <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
         <p>Questions? Email us at info@northstarbakery.com or call (555) 019-2831.</p>
     </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
