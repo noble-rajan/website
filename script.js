@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* 
-   FEATURE 1 & BROWSER STORAGE: Product Favorites or Wishlist Tracker
+   FEATURE 1 & Browser Storage: Product Favorites or Wishlist Tracker
  */
 function initFavoritesFeature() {
     const favoritesContainer = document.getElementById('favorites-list');
